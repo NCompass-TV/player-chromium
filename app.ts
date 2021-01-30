@@ -29,7 +29,9 @@ socket.on(SOCKET_EVENTS.disconnect, () => {
 
 const chrome_puppet = async () => {
     try {
+        // Switch to Puppeteer-Core
         const browser = await puppeteer.launch({ 
+            executablePath: '/usr/bin/chromium-browser',
             headless: false, 
             args: ['--start-fullscreen', `--app=${process.env.PLAYER_UI}`, '--incognito'], 
             ignoreDefaultArgs: ["--enable-automation"]
@@ -46,6 +48,11 @@ const chrome_puppet = async () => {
             setTimeout(() => {
                 chrome_puppet();
             }, 3000);
+        })
+
+        page.on('error', err => {
+            console.log(logsym.error, "Page Crashed, Recovering in a few");
+            
         })
     } catch(err) {
         console.log(logsym.error, 'Puppeteer_error', err);
