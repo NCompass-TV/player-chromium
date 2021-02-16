@@ -4,7 +4,7 @@
 
 import * as dotenv from 'dotenv';
 import * as logsym from 'log-symbols';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import io from 'socket.io-client';
 
 // Environment Variables Initialization
