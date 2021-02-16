@@ -43,7 +43,7 @@ const chrome_puppet = async () => {
 
         console.log(logsym.success, "Puppeteer Started");
     
-        browser.on('targetdestroyed', target => {
+        browser.on('targetdestroyed', (target: any) => {
             console.log(logsym.error, "Puppeteer Closed, Respawn in a few");
             setTimeout(() => {
                 chrome_puppet();
