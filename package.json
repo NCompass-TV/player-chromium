@@ -1,7 +1,7 @@
 {
-  "name": "player-chromium",
+  "name": "player-puppeteer",
   "version": "0.0.1",
-  "description": "Player Chromium Kiosk",
+  "description": "Chromium Kiosk via Puppeteer",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.ts",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NCompass-TV/player-chromium.git"
+    "url": "git+https://github.com/NCompass-TV/player-puppeteer.git"
   },
   "keywords": [
     "Chromium",
@@ -20,9 +20,9 @@
   "author": "Earl Gabuat",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/NCompass-TV/player-chromium/issues"
+    "url": "https://github.com/NCompass-TV/player-puppeteer/issues"
   },
-  "homepage": "https://github.com/NCompass-TV/player-chromium#readme",
+  "homepage": "https://github.com/NCompass-TV/player-puppeteer#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
     "log-symbols": "^4.0.0",
