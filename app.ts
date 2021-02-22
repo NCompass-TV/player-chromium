@@ -4,7 +4,7 @@
 
 import * as dotenv from 'dotenv';
 import * as logsym from 'log-symbols';
-import puppeteer from 'puppeteer';
+import puppeteer from 'puppeteer-core';
 import io from 'socket.io-client';
 
 // Environment Variables Initialization
@@ -43,7 +43,7 @@ const chrome_puppet = async () => {
 
         console.log(logsym.success, "Puppeteer Started");
     
-        browser.on('targetdestroyed', target => {
+        browser.on('targetdestroyed', (target: any) => {
             console.log(logsym.error, "Puppeteer Closed, Respawn in a few");
             setTimeout(() => {
                 chrome_puppet();
